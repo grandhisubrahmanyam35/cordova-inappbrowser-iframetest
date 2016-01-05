@@ -2,9 +2,9 @@
 
 InAppBrowser intercepts window.open calls and evaluates the target (optional parameter that defaults to _self)
 
-_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
-_blank: Opens in the InAppBrowser.
-_system: Opens in the system's web browser.
+* _self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
+* _blank: Opens in the InAppBrowser.
+* _system: Opens in the system's web browser.
 
 Anchor tags in HTML code will bypass InAppBrowser and and will per default be called in app (in Cordova WebView). That's an issue especially for 3rd vendor providers of HTML mashups
 
