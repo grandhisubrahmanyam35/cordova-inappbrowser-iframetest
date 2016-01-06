@@ -27,6 +27,8 @@ Some people will disable the iframe links: https://forums.meteor.com/t/cordova-h
 
 Some will handle links natively individually (in case you want to consider target information then it requires access and manipulation of HTML content via javascript if you want to handle): http://stackoverflow.com/questions/23962457/phonegap-how-to-make-links-from-iframes-open-in-inappbrowser
 
-## Purpoos of the app
+## Purpose of the app
 
-Demonstrate the behavior as outlined in techncial background sections. In the iframe you see a link called "Speyer". Target will be loaded in cordova webview and "capture" entire app with no back navigation option. In this example manipulation of iframe content would be possible but assuming SAP C4C case this would not be possible due to same-origin polic
+Demonstrate the behavior as outlined in techncial background sections.
+In the iframe you see a link called "Speyer". Target will be loaded in cordova webview and "capture" entire app with no back navigation option.
+In this example manipulation of iframe content would be possible but assuming SAP C4C case this would not be possible due to same-origin polic
