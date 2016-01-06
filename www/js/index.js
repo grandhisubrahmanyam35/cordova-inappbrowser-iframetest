@@ -38,5 +38,17 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         console.log('Received Event: ' + id);
+
+        $(document).on('click', function(e){
+
+            if (e.target.href !== 'http://www.wikipedia.com/') {
+                return;
+            }
+
+            e.preventDefault();
+            var target = '_blank';
+
+            window.open(e.target.href, target, 'location=no');
+        });
     }
 };

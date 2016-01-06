@@ -26,12 +26,21 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <meta name="msapplication-tap-highlight" content="no" />
         <title>iFrame Test</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
     <body>
-        Main view start
-        <a href="http://www.google.com">a href link to google</a>
         <br>
-        <a href="http://www.google.com" onclick="window.open('http://www.google.com');">window.open link to google</a>
+        Main view start
+        <br>
+        <br>
+        <a href="http://www.google.com">normal a href to google.com which will be loaded in webview</a>
+        <br>
+        <br>
+        <a href="http://www.wikipedia.com">a href to wikipedia.com which will be intercepted by js and loaded via window.open and _bank in inappbrowser</a>
+        <br>
+        <br>
+        <p onclick="window.open('http://www.google.com', '_blank');">window.open to google.com which will be loaded in inappbrowser</p>
+        <br>
         <br>
         Iframe start
         <br>

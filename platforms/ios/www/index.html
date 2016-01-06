@@ -25,16 +25,30 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <title>Hello World</title>
+        <title>iFrame Test</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+        <br>
+        Main view start
+        <br>
+        <br>
+        <a href="http://www.google.com">normal a href to google.com which will be loaded in webview</a>
+        <br>
+        <br>
+        <a href="http://www.wikipedia.com">a href to wikipedia.com which will be intercepted by js and loaded via window.open and _bank in inappbrowser</a>
+        <br>
+        <br>
+        <p onclick="window.open('http://www.google.com', '_blank');">window.open to google.com which will be loaded in inappbrowser</p>
+        <br>
+        <br>
+        Iframe start
+        <br>
+        <iframe src="http://www.jeanineandmarco.com/wedding/" id='frameDemo' height=800 width=800></iframe>
+        <br>
+        IFrame end
+        <br>
+        Main view end
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
