@@ -107,7 +107,7 @@
     theWebView.backgroundColor = [UIColor blackColor];
 
     return [super webViewDidFinishLoad:theWebView];
-} 
+}
 
 - (void) webViewDidStartLoad:(UIWebView*)theWebView
 {
@@ -120,6 +120,7 @@
 }
 
 - (BOOL) webView:(UIWebView*)theWebView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType {
+    // check out http://stackoverflow.com/questions/8490038/open-target-blank-links-outside-of-uiwebview-in-safari
     return [super webView:theWebView shouldStartLoadWithRequest:request navigationType:navigationType];
 }
 
