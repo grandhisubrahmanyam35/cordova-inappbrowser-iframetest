@@ -107,11 +107,7 @@
     theWebView.backgroundColor = [UIColor blackColor];
 
     return [super webViewDidFinishLoad:theWebView];
-}
-
-/* Comment out the block below to over-ride */
-
-/*
+} 
 
 - (void) webViewDidStartLoad:(UIWebView*)theWebView
 {
@@ -123,11 +119,10 @@
     return [super webView:theWebView didFailLoadWithError:error];
 }
 
-- (BOOL) webView:(UIWebView*)theWebView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
-{
+- (BOOL) webView:(UIWebView*)theWebView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType {
     return [super webView:theWebView shouldStartLoadWithRequest:request navigationType:navigationType];
 }
-*/
+
 
 @end
 
