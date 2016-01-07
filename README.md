@@ -43,6 +43,6 @@ Examples in iFrame:
 - a href="http://www.google.com"  will be opened in iFrame
 - a href="http://www.eidinger.info" target="_blank" will be opened in cordova web view and capture whole application
 - 
-## Appending
+## Other useful information
 
 https://github.com/phonegap/phonegap/wiki/iFrame-Usage
