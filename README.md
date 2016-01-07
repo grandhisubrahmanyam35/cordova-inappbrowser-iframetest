@@ -40,5 +40,5 @@ Some people will disable all iframe links to be on the same side: https://forums
 
 Demonstrate the behavior as outlined in techncial background sections.
 Examples in iFrame:
-- <a href="http://www.google.com">  will be opened in iFrame
-- <a href="http://www.eidinger.info" target="_blank"> will be opened in cordova web view and capture whole application
+- a href="http://www.google.com"  will be opened in iFrame
+- a href="http://www.eidinger.info" target="_blank" will be opened in cordova web view and capture whole application
