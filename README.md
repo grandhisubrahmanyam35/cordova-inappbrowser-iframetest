@@ -2,9 +2,12 @@
 
 ## Use Case
 
-3rd party iframes might define links (a href target=_blank) which will be openend in cordova webview and "capture" entire app with no back navigation option.
+3rd party iframes contain different kind of links. Most of the links are navigation links between html pages of the same domain. The html pages will be openend in iframe. Exampe is a href="otherPage.html"
+However, certain links in the iframe, especially to foreign content,  will be openend in cordova webview and "capture" entire app with no back navigation option. Example is a href="http://www.google.com" target=_blank
 
 ## Techncial background
+
+### Standard behavior (no iFrame)
 
 Links (a href) will be opened in cordova webview per default.
 
@@ -21,14 +24,21 @@ But static anchor tags in HTML page will bypass InAppBrowser and still be called
 
 You can override the default behavior for links part of your OWN HTML code easily: http://stackoverflow.com/questions/1760096/override-default-behaviour-for-link-a-objects-in-javascript || https://gist.github.com/JonathanHindi/6301111
 
+Some will handle links natively individually (in case you want to consider target information then it requires access and manipulation of HTML content via javascript if you want to handle): http://stackoverflow.com/questions/23962457/phonegap-how-to-make-links-from-iframes-open-in-inappbrowser
+
+### iFrame behavior
+
+* _self =  Opens in iFrame.
+* _blank = Capture the whole Cordova WebView.
+* _system = Capture the whole Cordova WebView.
+
 In case webpages are loaded via file protocol (as it's the case for cordova) you can manipulate 3rd party iframes dynamically via javascript. However, in case webpages are loaded via an http web server then same-origin policy applies => 3rd party iframes content cannot be manipluated (SAP C4C case) :(
 
-Some people will disable the iframe links: https://forums.meteor.com/t/cordova-how-to-prevent-links-in-embedded-iframes-to-replace-application/10140
-
-Some will handle links natively individually (in case you want to consider target information then it requires access and manipulation of HTML content via javascript if you want to handle): http://stackoverflow.com/questions/23962457/phonegap-how-to-make-links-from-iframes-open-in-inappbrowser
+Some people will disable all iframe links to be on the same side: https://forums.meteor.com/t/cordova-how-to-prevent-links-in-embedded-iframes-to-replace-application/10140
 
 ## Purpose of the app
 
 Demonstrate the behavior as outlined in techncial background sections.
-In the iframe you see a link called "Speyer". Target will be loaded in cordova webview and "capture" entire app with no back navigation option.
-In this example manipulation of iframe content would be possible but assuming SAP C4C case this would not be possible due to same-origin polic
+Examples in iFrame:
+- <a href="http://www.google.com">  will be opened in iFrame
+- <a href="http://www.eidinger.info" target="_blank"> will be opened in cordova web view and capture whole application
