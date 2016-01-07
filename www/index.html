@@ -32,19 +32,20 @@
         <br>
         Main view start
         <br>
-        <br>
-        <a href="http://www.google.com">normal a href to google.com which will be loaded in webview</a>
-        <br>
-        <br>
-        <a href="http://www.wikipedia.com">a href to wikipedia.com which will be intercepted by js and loaded via window.open and _bank in inappbrowser</a>
-        <br>
-        <br>
-        <p onclick="window.open('http://www.google.com', '_blank');">window.open to google.com which will be loaded in inappbrowser</p>
-        <br>
+        <p>Static links are always opened in webview</p>
+        <p><a href="http://www.google.com">a href="http://wwww.google.com"</a></p>
+        <p><a href="http://www.wikipedia.com" target="_self">a href="http://wwww.wikipedia.com" target="_self"</a></p>
+        <p><a href="http://www.eidinger.info" target="_blank">a href="http://wwww.eidinger.info" target="_blank"</a></p>
+        <p><a href="http://www.jeanineandmarco.com" target="_system">a href="http://wwww.jeanineandmarco.com" target="_system"</a></p>
+        <p>Links openend by window.open might be opened in InAppBrowser or system browser. It depends on supplied target info</p>
+        <p onclick="window.open('http://www.eidinger.info', '_blank')">onclick="window.open('http://www.eidinger.info', '_blank')"</p>
+        <p onclick="window.open('http://www.jeanineandmarco.com', '_system')">onclick="window.open('http://www.jeanineandmarco.com', '_system')"</p>
+        <p onclick="parent.open('http://www.eidinger.info', '_blank')">onclick="parent.open('http://www.eidinger.info', '_blank')"</p>
+        <p onclick="parent.open('http://www.jeanineandmarco.com', '_system')">onclick="parent.open('http://www.jeanineandmarco.com', '_system')"</p>  
         <br>
         Iframe start
         <br>
-        <iframe src="http://www.jeanineandmarco.com/wedding/" id='frameDemo' height=800 width=800></iframe>
+        <iframe src="http://www.jeanineandmarco.com/examples/simpleLinks.html" id='frameDemo' height=800 width=800></iframe>
         <br>
         IFrame end
         <br>
